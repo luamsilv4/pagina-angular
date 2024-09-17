@@ -1,0 +1,63 @@
+/* Estilo para o container da página Sobre */
+.sobre-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  padding: 20px;
+  margin-top: 200px;
+}
+
+/* Estilo para o cartão do cabeçalho */
+.header-card {
+  width: 100%;
+  max-width: 600px; /* Define o tamanho máximo do cartão */
+  margin-bottom: 20px; /* Espaço entre o cabeçalho e o conteúdo */
+}
+
+/* Estilo para o cartão de links */
+.links-card {
+  width: 100%;
+  max-width: 600px; /* Define o tamanho máximo do cartão */
+}
+
+/* Estilo para os links dentro do cartão */
+.sobre-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espaço entre os links */
+}
+
+.sobre-links a {
+  display: flex;
+  align-items: center; /* Alinha ícones e texto verticalmente */
+  text-decoration: none;
+  color: #0011ff; /* Cor do texto dos links */
+}
+
+.sobre-links mat-icon {
+  margin-right: 8px; /* Espaço entre o ícone e o texto */
+}
+
+.pegadinha-mundial {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px; /* Espaço acima do cartão de pegadinha */
+}
+
+.palmeiras {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.palmeiras a {
+  display: flex;
+  align-items: center; /* Alinha ícones e texto verticalmente */
+  text-decoration: none;
+  color: #0011ff; /* Cor do texto dos links */
+}
+
+.palmeiras mat-icon {
+  margin-right: 8px; /* Espaço entre o ícone e o texto */
+}

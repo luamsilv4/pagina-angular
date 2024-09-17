@@ -1,0 +1,70 @@
+<!-- Container principal para centralizar o conteúdo do cadastro -->
+<div class="cadastro-container">
+  
+    <!-- Seção de cabeçalho com título e descrição -->
+    <div class="header">
+      <!-- Título principal da página de cadastro -->
+      <h1>Cadastro de Usuário</h1>
+      <!-- Descrição adicional para guiar o usuário -->
+      <p>Preencha os campos abaixo para criar uma nova conta</p>
+    </div>
+    
+    <!-- Container do formulário de cadastro -->
+    <div class="cadastro">
+      <!-- Formulário que utiliza ReactiveForms do Angular -->
+      <form [formGroup]="cadastroForm" (ngSubmit)="onSubmit()">
+        
+        <!-- Campo Nome -->
+        <mat-form-field appearance="fill">
+          <mat-label>Nome</mat-label>
+          <input matInput formControlName="nome" placeholder="Digite seu nome" required>
+          <!-- Mensagem de erro exibida se o campo Nome for inválido e tocado -->
+          <mat-error *ngIf="cadastroForm.get('nome')?.invalid && cadastroForm.get('nome')?.touched">
+            Nome é obrigatório
+          </mat-error>
+        </mat-form-field>
+  
+        <!-- Campo Email -->
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" formControlName="email" placeholder="Digite seu email" required>
+          <!-- Mensagem de erro exibida se o campo Email for inválido e tocado -->
+          <mat-error *ngIf="cadastroForm.get('email')?.invalid && cadastroForm.get('email')?.touched">
+            Email inválido
+          </mat-error>
+        </mat-form-field>
+  
+        <!-- Campo Senha -->
+        <mat-form-field appearance="fill">
+          <mat-label>Senha</mat-label>
+          <input matInput type="password" formControlName="senha" placeholder="Digite sua senha" required>
+          <!-- Mensagem de erro exibida se o campo Senha for inválido e tocado -->
+          <mat-error *ngIf="cadastroForm.get('senha')?.invalid && cadastroForm.get('senha')?.touched">
+            Senha é obrigatória e precisa ter pelo menos 6 caracteres
+          </mat-error>
+        </mat-form-field>
+  
+        <!-- Campo Confirmar Senha -->
+        <mat-form-field appearance="fill">
+          <mat-label>Confirmar Senha</mat-label>
+          <input matInput type="password" formControlName="confirmarSenha" placeholder="Confirme sua senha" required>
+          <!-- Mensagem de erro exibida se as senhas não coincidirem e o campo for tocado -->
+          <mat-error *ngIf="cadastroForm.hasError('mismatch') && cadastroForm.get('confirmarSenha')?.touched">
+            As senhas não coincidem
+          </mat-error>
+        </mat-form-field>
+  
+        <!-- Botão de submit para o formulário de cadastro -->
+        <button mat-raised-button color="primary" type="submit" [disabled]="!cadastroForm.valid">
+          Cadastrar
+        </button>
+      </form>
+  
+      <!-- Mensagem de sucesso exibida após o cadastro ser realizado -->
+      <div *ngIf="successMessage" class="success-message">
+        {{successMessage}}
+      </div>
+  
+    </div>
+  </div>
+  

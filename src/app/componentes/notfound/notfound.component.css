@@ -1,0 +1,18 @@
+.notfound-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    padding: 20px;
+    margin-top: 200px;
+}
+
+.header-card{
+    width: 100%;
+    max-width: 600px; /* Define o tamanho máximo do cartão */
+    margin-bottom: 20px; /* Espaço entre o cabeçalho e o conteúdo */
+}
+
+mat-progress-bar {
+    margin: 20px 0; /* Espaço acima e abaixo da barra de progresso */
+  }

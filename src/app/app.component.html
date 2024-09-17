@@ -1,0 +1,11 @@
+<mat-toolbar> <!-- Esse campo se refere a barra de cima-->
+<div class="container">
+    <span> {{title}} </span> <!-- Titulo, o mesmo que colocar no componente -->
+
+    <a routerLink="/" routerLinkActive = "ativo" [routerLinkActiveOptions]= "{exact: true}" > <button mat-stroked-button color="accent">Home</button></a>
+    <a routerLink="/cadastro" routerLinkActive = "ativo" ><button mat-stroked-button color="accent">Cadastro</button></a>
+    <a routerLink="/sobre" routerLinkActive = "ativo" ><button mat-stroked-button color="accent">Sobre</button></a>
+</div>
+</mat-toolbar>
+
+<router-outlet />
